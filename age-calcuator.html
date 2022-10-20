@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Age Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="yearBorn">Enter the Year you were born</label>
+        <input id="yearBorn" type="text">
+        <button id="ageBtn">What's my age?</button>
+    </form>
+    <h1>Your age is 
+        <output></output>
+    </h1>
+<script>
+
+    let ageBtn= document.getElementById('ageBtn');
+
+    ageBtn.addEventListener('click', getAge);
+
+    function getAge() {
+        console.log('agebtn was clicked');
+        let currentYear= 2022;
+        let yearBorn= document.getElementById('yearBorn');
+        console.log(typeof yearBorn);
+        yearBorn= Number(yearBorn.value);
+        console.log(typeof yearBorn);
+        console.log(`you are ${currentYear-yearBorn} years old.`);
+        let yourAge =currentYear-yearBorn;
+        let yourAgeOutput = document.querySelector('output');
+        yourAgeOutput.innerHTML= yourAge;
+    }
+
+
+   
+
+</script>
+</body>
+</html>
