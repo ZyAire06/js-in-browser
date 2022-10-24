@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Statement</title>
+</head>
+<body>
+  <script>
+    function calcTax(total, taxRate){
+        let tax = total*taxRate;
+        return tax;
+    }
+    console.log(`tax due is ${calcTax(176, 0.08)}`);
+
+    function calcShipping(distance){
+        let shipping;
+        if (distance <= 5){
+            shipping = 10.00
+        }else if (distance > 5 && distance<=10){
+            shipping = 15.00;
+        }else if (distance> 10){
+            shipping25;
+        }
+        return shipping;
+    }
+    console.log(`shipping cost is ${calcShipping(5)}`);
+    function calcTax(amount, tax, shipping){
+        let total = amount;
+        let totalDue = total + tax + shipping;
+        return totalDue;
+    }
+    console.log(`total due is ${totalDue(176, calcTax(176, 0.08), calcShipping(5))}`);
+  </script>  
+</body>
+</html>

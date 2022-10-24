@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Arguments</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table *{
+            outline: 1px solid #000;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>product</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Eggs</td>
+                <td>5.00</td>
+            </tr>
+
+            <tr>
+                <td>Milk</td>
+                <td>5.00</td>
+            </tr>
+
+            <tr>
+                <td>Bread</td>
+                <td>4.25</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Amount Due <output>15.25</output></p>
+    <h5>Total<span id="total"></span></h5>
+    <script>
+        function calcTotal(taxRate, shipping){
+            let amountDue = Number(document.querySelector("output").innerText);
+            console.log(amountDue);
+            let totalDue = amountDue + (amountDue*taxRate)+shipping;
+            console.log(totalDue);
+            document.getElementById("total").innerText = `${totalDue.toFixed(20)}`; //"$" +totalDue.toFixed(2); is another way of doing it (jadyn way)
+        }
+        console.log(calcTotal(0.08, 10.00));
+        console.log(calcTotal(0.09, 25.00));
+    </script>
+</body>
+</html>

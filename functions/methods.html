@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    
+    <script>
+        window.addEventListener('load', promptUserName);
+
+        function promptUserName(){
+            let userName = window.prompt("What's your name?", "Default User");
+          if (userName && !userName.trim().length == 0){
+            console.log(`Hello ${userName}`);
+          }else{
+            console.log(`Hello Default User`);
+          }
+        }
+        //strings of a lenght of 0 = false > will = true
+
+
+
+
+        function pokerWinner(){
+            let joe = 100;
+            let mary = 50;
+            let linda = 150;
+            console.log(Math.max(joe, mary, linda)); //this will returen linda 
+            let amount =(Math.max(joe, mary, linda));
+            switch(amount){
+                case 100: 
+                    console.log('The Winner is Joe');
+                    break;
+                case 50:
+                    console.log('The Winner is Mary');
+                    break;
+                case 150:
+                    console.log('The Winner is Linda');
+                    break;
+                default:
+                    console.log('No Winner');
+            }
+        }
+        pokerWinner();
+    </script>
+</body>
+</html>
