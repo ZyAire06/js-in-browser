@@ -12,7 +12,7 @@
         let tax = total*taxRate;
         return tax;
     }
-    console.log(`tax due is ${calcTax(176, 0.08)}`);
+    console.log(`tax due is ${calcTax(150, 0.09)}`);
 
     function calcShipping(distance){
         let shipping;
@@ -21,17 +21,18 @@
         }else if (distance > 5 && distance<=10){
             shipping = 15.00;
         }else if (distance> 10){
-            shipping25;
+            shipping = 25;
         }
         return shipping;
     }
-    console.log(`shipping cost is ${calcShipping(5)}`);
-    function calcTax(amount, tax, shipping){
+    console.log(`shipping cost is ${calcShipping(50)}`);
+
+    function totalDue(amount, tax, shipping){
         let total = amount;
         let totalDue = total + tax + shipping;
         return totalDue;
     }
-    console.log(`total due is ${totalDue(176, calcTax(176, 0.08), calcShipping(5))}`);
+    console.log(`total due is ${totalDue(150, calcTax(150, 0.09), calcShipping(50))}`);
   </script>  
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+   <script>
+    let myName = "Zy'Aire";
+    let myFullName = 'Zy\'Aire McCreary-Scott';
+
+    console.log( myName);
+    console.log( myFullName);
+
+    let myGreeting = 'I\'m Zy\'Aire, how are you '
+    console.log(myGreeting);
+
+
+    console.log(myName.length);
+
+    let upName = myName.toUpperCase();
+    console.log(upName);
+
+
+    let lowName = myName.toLowerCase();
+    console.log(lowName);
+
+    let firstName = "Zy'Aire McCreary-Scott"
+    let space = firstName.indexOf(" ");
+    console.log(space);
+
+    let phone = "408-439-5658";
+    let firstDash = phone.indexOf("-");
+    console.log(firstDash);
+
+    let parens = phone.indexOf("(");
+    console.log(parens);
+
+    let nickName = myName.substring(0, 2);
+    console.log(nickName);
+
+    let myString = "whitespace";
+    let white = myString.substring(0, 3);
+
+    let name = "betty jo smalltree";
+
+    // let first = name.slice(0, 5);
+    // console.log(first);
+    // let last = name.slice(6, 15 );
+    // console.log(last);
+
+    let pos = name.indexOf("t");
+    console.log(pos); //return
+
+    let lastPos = name.lastIndexOf(' ');
+    console.log(lastPos);
+
+   </script> 
+</body>
+</html>

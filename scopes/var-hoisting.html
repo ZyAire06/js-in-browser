@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var hoisting</title>
+</head>
+<body onload="getvariable()">
+    <input type="button" value="Get User Name" onclick="getUserName()">
+    <script>
+        var userName = "joe"; //global variable 
+
+        function getvariable(){
+            let userName = "ZyAire";
+            console.log(`this is the userName from gerVariable function ${userName}`);
+        }
+        function getUserName(){
+            alert(userName); 
+        }
+    </script>
+</body>
+</html>
